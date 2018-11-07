@@ -1,0 +1,27 @@
+
+
+<h1>file upload</h1>
+
+<form class="pure-form pure-form-stacked"
+      action="/upload" method="post" enctype="multipart/form-data">
+  <input type="file" name="file" accept=".png, .jpg, .jpeg">
+  <button type="submit" class="pure-button pure-button-primary">Upload!</button>
+</form>
+
+<h1>images</h1>
+
+{% if not images %}
+  <p>no images</p>
+{% endif %}
+
+{% for i in images %}
+  <div class="img-and-caption">
+    <div class="img-container">
+      <img src="/img/{{ i.img_id }}" class="pure-img">
+    </div>
+    <p class="img-caption">
+      <a href="{{ url_for('serve_img', img_id=i.img_id) }}">{{ i.filename }}</a>
+    </p>
+  </div>
+
+{% endfor %}

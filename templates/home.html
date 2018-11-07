@@ -1,0 +1,1353 @@
+{% extends 'base.html' %}
+
+{% block title %}home{% endblock %}
+
+{% block header %}
+
+<div class="page-banner row" id="pageHeader">
+    <div class="page-banner-wraper">
+        <div>
+            <h1 class="home-title">Find Your Best-Fit Partner</h1>
+            <p class="home-content">A place to browse and share home renovation needs. A place to find the right design
+                and construction professionals. A place to connect with others who have been there too.</p>
+        </div>
+
+        <div class="search-bar">
+            <form role="search" method="post" action="/search">
+                <div class="input-group">
+                    <input type="text" name="input" class="form-control" placeholder="✎ &nbsp &nbsp Which team/client are you looking for..."
+                        style="height:55px;border-radius: 0;border:0.5px solid rgba(0,0,0,0.1);z-index:0;box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);">
+
+                    <span class="input-group-btn" id="select-box">
+                        <select class="btn btn-default dropdown-toggle" name="type" aria-label="Example select with button addon">
+                            <option selected value="0" style="position: absolute; top: 50px;">All Teams</option>
+                            <option value="1">All Clients</option>
+                        </select>
+                    </span>
+                    <span class="input-group-btn">
+                        <span class="search-button">
+                            <button class="btn btn-default" type="submit" style="outline-style: none;">SEARCH</button>
+                        </span>
+                    </span>
+
+                    <!-- <span class="input-group-btn" id="drop-box">
+                        <button type="button" name="type" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-hdd-o"></i>&nbsp &nbsp
+                            <span id="dropdown_title">All Teams</span>&nbsp &nbsp
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right" id="dropdown-items">
+                            <li><a href="#" value>All Teams</a></li>
+                            <li><a href="#">All Clients</a></li>
+                        </ul>
+                    </span>
+                    <span class="input-group-btn" id="search-button">
+                        <button class="btn btn-default" type="submit">SEARCH</button>
+                    </span> -->
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<!--Recent Posts-->
+<section id="scrolling-post">
+    <div class="container">
+        <div class="row">
+            <!--Recent Client Posts-->
+            <div class="col-md-12" id="client-post">
+                <div id="client-post-title">
+                    <ul class="scrolling-post" style="padding-left:15px;">
+                        <li>
+                            <p style="font-size:20px;font-weight: bold;list-style-type:none;text-transform: uppercase">Recent
+                                Client Posts</p>
+                        </li>
+                        <li style="float:right;margin-right: 20px;padding-top: 3px;">
+                            <p><a href="" style="text-decoration:none;list-style-type:none;">View
+                                    More
+                                    ></a></p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="myCarousel-client" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+
+                        <!--item 1-->
+                        <div class="item active">
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1501876725168-00c445821c9e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2a1a9a1d07a8a1cb53aa3686da2ef497&auto=format&fit=crop&w=2550&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1494048768229-78000599369d?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                text-overflow: ellipsis;max-height: 30px;">Need
+                                                Interior Designers</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                -webkit-box-orient: vertical;">Cras
+                                    justo odio, dapibus ac facilisis in, egestas
+                                    eget quam.
+                                    Donec id elit non mi
+                                    porta
+                                    gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                    dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4d2529242e0b4fadad755467e572682a&auto=format&fit=crop&w=2855&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1491574953230-a12e6d92ce4b?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                    text-overflow: ellipsis;max-height: 30px;">Need
+                                                Kitchen Remodelers</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                    -webkit-box-orient: vertical;">Cras
+                                    justo odio, dapibus ac facilisis in, egestas
+                                    eget quam.
+                                    Donec id elit non mi
+                                    porta
+                                    gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                    dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-0.3.5&s=e6edcd5ea442e1089709a0874788291d&auto=format&fit=crop&w=1653&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1523574273386-b6f06440d3ef?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                        text-overflow: ellipsis;max-height: 30px;">Need
+                                                Home Builders</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                        -webkit-box-orient: vertical;">Cras
+                                    justo odio, dapibus ac facilisis in, egestas
+                                    eget quam.
+                                    Donec id elit non mi
+                                    porta
+                                    gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                    dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1519643225200-94e79e383724?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=57a962be8447ae8fbea351abe9262275&auto=format&fit=crop&w=1655&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1504195942065-4f5b12cec31d?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                            text-overflow: ellipsis;max-height: 30px;">Need
+                                                Interior Decorators</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                            -webkit-box-orient: vertical;">Cras
+                                    justo odio, dapibus ac facilisis in, egestas
+                                    eget quam.
+                                    Donec id elit non mi
+                                    porta
+                                    gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                    dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!--/item-->
+
+                        <!--item 2-->
+                        <div class="item">
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1501876725168-00c445821c9e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2a1a9a1d07a8a1cb53aa3686da2ef497&auto=format&fit=crop&w=2550&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1494048768229-78000599369d?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                    text-overflow: ellipsis;max-height: 30px;">Need
+                                                Interior Designers</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                    -webkit-box-orient: vertical;">Cras
+                                        justo odio, dapibus ac facilisis in, egestas
+                                        eget quam.
+                                        Donec id elit non mi
+                                        porta
+                                        gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                        dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4d2529242e0b4fadad755467e572682a&auto=format&fit=crop&w=2855&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1491574953230-a12e6d92ce4b?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                        text-overflow: ellipsis;max-height: 30px;">Need
+                                                Kitchen Remodelers</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                        -webkit-box-orient: vertical;">Cras
+                                        justo odio, dapibus ac facilisis in, egestas
+                                        eget quam.
+                                        Donec id elit non mi
+                                        porta
+                                        gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                        dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-0.3.5&s=e6edcd5ea442e1089709a0874788291d&auto=format&fit=crop&w=1653&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1523574273386-b6f06440d3ef?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                            text-overflow: ellipsis;max-height: 30px;">Need
+                                                Home Builders</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                            -webkit-box-orient: vertical;">Cras
+                                        justo odio, dapibus ac facilisis in, egestas
+                                        eget quam.
+                                        Donec id elit non mi
+                                        porta
+                                        gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                        dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1519643225200-94e79e383724?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=57a962be8447ae8fbea351abe9262275&auto=format&fit=crop&w=1655&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1504195942065-4f5b12cec31d?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                                text-overflow: ellipsis;max-height: 30px;">Need
+                                                Interior Decorators</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                                -webkit-box-orient: vertical;">Cras
+                                        justo odio, dapibus ac facilisis in, egestas
+                                        eget quam.
+                                        Donec id elit non mi
+                                        porta
+                                        gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                        dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!--/item-->
+
+
+                        <!--item 3-->
+                        <div class="item">
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1501876725168-00c445821c9e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2a1a9a1d07a8a1cb53aa3686da2ef497&auto=format&fit=crop&w=2550&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1494048768229-78000599369d?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                    text-overflow: ellipsis;max-height: 30px;">Need
+                                                Interior Designers</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                    -webkit-box-orient: vertical;">Cras
+                                        justo odio, dapibus ac facilisis in, egestas
+                                        eget quam.
+                                        Donec id elit non mi
+                                        porta
+                                        gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                        dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4d2529242e0b4fadad755467e572682a&auto=format&fit=crop&w=2855&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1491574953230-a12e6d92ce4b?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                        text-overflow: ellipsis;max-height: 30px;">Need
+                                                Kitchen Remodelers</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                        -webkit-box-orient: vertical;">Cras
+                                        justo odio, dapibus ac facilisis in, egestas
+                                        eget quam.
+                                        Donec id elit non mi
+                                        porta
+                                        gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                        dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-0.3.5&s=e6edcd5ea442e1089709a0874788291d&auto=format&fit=crop&w=1653&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1523574273386-b6f06440d3ef?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                            text-overflow: ellipsis;max-height: 30px;">Need
+                                                Home Builders</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                            -webkit-box-orient: vertical;">Cras
+                                        justo odio, dapibus ac facilisis in, egestas
+                                        eget quam.
+                                        Donec id elit non mi
+                                        porta
+                                        gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                        dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1519643225200-94e79e383724?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=57a962be8447ae8fbea351abe9262275&auto=format&fit=crop&w=1655&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1504195942065-4f5b12cec31d?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                                text-overflow: ellipsis;max-height: 30px;">Need
+                                                Interior Decorators</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                                -webkit-box-orient: vertical;">Cras
+                                        justo odio, dapibus ac facilisis in, egestas
+                                        eget quam.
+                                        Donec id elit non mi
+                                        porta
+                                        gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                        dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!--/item-->
+
+
+                    </div>
+                    <!--/carousel-inner-->
+                    <a class="left carousel-control" href="#myCarousel-client" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel-client" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!--/myCarousel-->
+            </div>
+            <!--/Recent Client Posts-->
+
+            <!--Recent Team Posts-->
+            <div class="col-md-12" id="team-post" style="margin-top: 80px;">
+                <div id="team-post-title">
+                    <ul class="scrolling-post" style="padding-left:15px;">
+                        <li>
+                            <p style="font-size:20px;font-weight: bold;list-style-type:none;text-transform: uppercase">Recent
+                                Team Posts</p>
+                        </li>
+                        <li style="float:right;margin-right: 20px;padding-top: 3px;">
+                            <p><a href="" style="text-decoration:none;list-style-type:none;">View
+                                    More
+                                    ></a></p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="myCarousel-team" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+
+                        <!--item 1-->
+                        <div class="item active">
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1525475711852-ed23365b4d11?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5c919ed02a2229eb86422e32599eafe7&auto=format&fit=crop&w=1650&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1494048768229-78000599369d?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                    text-overflow: ellipsis;max-height: 30px;">Interior
+                                                Designers</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                    -webkit-box-orient: vertical;">Cras
+                                        justo odio, dapibus ac facilisis in, egestas
+                                        eget quam.
+                                        Donec id elit non mi
+                                        porta
+                                        gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                        dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f3e4fdb4b32a08eaf473341e4577fa65&auto=format&fit=crop&w=1650&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1491574953230-a12e6d92ce4b?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                        text-overflow: ellipsis;max-height: 30px;">Kitchen
+                                                Remodelers</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                        -webkit-box-orient: vertical;">Cras
+                                        justo odio, dapibus ac facilisis in, egestas
+                                        eget quam.
+                                        Donec id elit non mi
+                                        porta
+                                        gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                        dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1489098860479-fb4ca7a47e04?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=05f242191ee30f2c433f042f986754ef&auto=format&fit=crop&w=1650&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1523574273386-b6f06440d3ef?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                            text-overflow: ellipsis;max-height: 30px;">Home
+                                                Builders</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                            -webkit-box-orient: vertical;">Cras
+                                        justo odio, dapibus ac facilisis in, egestas
+                                        eget quam.
+                                        Donec id elit non mi
+                                        porta
+                                        gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                        dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1458829267686-b15150d4a28e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9eea5e931ba05662b7792b0faf2dcb65&auto=format&fit=crop&w=1650&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1504195942065-4f5b12cec31d?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                                text-overflow: ellipsis;max-height: 30px;">Interior
+                                                Decorators</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                                -webkit-box-orient: vertical;">Cras
+                                        justo odio, dapibus ac facilisis in, egestas
+                                        eget quam.
+                                        Donec id elit non mi
+                                        porta
+                                        gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                        dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!--/item-->
+
+                        <!--item 2-->
+                        <div class="item">
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1501876725168-00c445821c9e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2a1a9a1d07a8a1cb53aa3686da2ef497&auto=format&fit=crop&w=2550&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1494048768229-78000599369d?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                        text-overflow: ellipsis;max-height: 30px;">Need
+                                                Interior Designers</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                        -webkit-box-orient: vertical;">Cras
+                                            justo odio, dapibus ac facilisis in, egestas
+                                            eget quam.
+                                            Donec id elit non mi
+                                            porta
+                                            gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                            dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4d2529242e0b4fadad755467e572682a&auto=format&fit=crop&w=2855&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1491574953230-a12e6d92ce4b?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                            text-overflow: ellipsis;max-height: 30px;">Need
+                                                Kitchen Remodelers</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                            -webkit-box-orient: vertical;">Cras
+                                            justo odio, dapibus ac facilisis in, egestas
+                                            eget quam.
+                                            Donec id elit non mi
+                                            porta
+                                            gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                            dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-0.3.5&s=e6edcd5ea442e1089709a0874788291d&auto=format&fit=crop&w=1653&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1523574273386-b6f06440d3ef?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                                text-overflow: ellipsis;max-height: 30px;">Need
+                                                Home Builders</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                                -webkit-box-orient: vertical;">Cras
+                                            justo odio, dapibus ac facilisis in, egestas
+                                            eget quam.
+                                            Donec id elit non mi
+                                            porta
+                                            gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                            dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1519643225200-94e79e383724?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=57a962be8447ae8fbea351abe9262275&auto=format&fit=crop&w=1655&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1504195942065-4f5b12cec31d?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                                    text-overflow: ellipsis;max-height: 30px;">Need
+                                                Interior Decorators</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                                    -webkit-box-orient: vertical;">Cras
+                                            justo odio, dapibus ac facilisis in, egestas
+                                            eget quam.
+                                            Donec id elit non mi
+                                            porta
+                                            gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                            dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!--/item-->
+
+
+                        <!--item 3-->
+                        <div class="item">
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1501876725168-00c445821c9e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2a1a9a1d07a8a1cb53aa3686da2ef497&auto=format&fit=crop&w=2550&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1494048768229-78000599369d?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                        text-overflow: ellipsis;max-height: 30px;">Need
+                                                Interior Designers</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                        -webkit-box-orient: vertical;">Cras
+                                            justo odio, dapibus ac facilisis in, egestas
+                                            eget quam.
+                                            Donec id elit non mi
+                                            porta
+                                            gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                            dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4d2529242e0b4fadad755467e572682a&auto=format&fit=crop&w=2855&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1491574953230-a12e6d92ce4b?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                            text-overflow: ellipsis;max-height: 30px;">Need
+                                                Kitchen Remodelers</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                            -webkit-box-orient: vertical;">Cras
+                                            justo odio, dapibus ac facilisis in, egestas
+                                            eget quam.
+                                            Donec id elit non mi
+                                            porta
+                                            gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                            dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-0.3.5&s=e6edcd5ea442e1089709a0874788291d&auto=format&fit=crop&w=1653&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1523574273386-b6f06440d3ef?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                                text-overflow: ellipsis;max-height: 30px;">Need
+                                                Home Builders</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                                -webkit-box-orient: vertical;">Cras
+                                            justo odio, dapibus ac facilisis in, egestas
+                                            eget quam.
+                                            Donec id elit non mi
+                                            porta
+                                            gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                            dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3" style="margin-top:5px;">
+                                <a href="" style="text-decoration:none;" class="scrolling-post-content">
+                                    <div class="thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1519643225200-94e79e383724?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=57a962be8447ae8fbea351abe9262275&auto=format&fit=crop&w=1655&q=80"
+                                            alt="post1">
+                                        <div class="caption">
+                                            <ul style="padding-left:0">
+                                                <li style="display: inline-block; vertical-align: middle"><img src="https://images.unsplash.com/profile-1504195942065-4f5b12cec31d?dpr=2&auto=format&fit=crop&w=128&h=128&q=60&crop=faces&bg=fff"
+                                                        alt="client photo" style="max-width:36px;border-radius: 50%;display: inline-block;"></li>
+                                                <ul style="display: inline-block; vertical-align: middle;padding-left:10px">
+                                                    <li style="list-style-type:none;font-weight: 600;font-size:13px">garycorr</li>
+                                                    <li style="list-style-type:none;color:rgba(0,0,0,0.3);font-size:11px">Sep
+                                                        24th,
+                                                        2018</li>
+                                                </ul>
+                                            </ul>
+                                            <h3 class="post-title" style="font-weight: 700;font-size:16px;overflow: hidden;white-space: nowrap;
+                                                    text-overflow: ellipsis;max-height: 30px;">Need
+                                                Interior Decorators</h3>
+                                            <!-- <p style="max-height:57px; font-size:13px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 3;
+                                                    -webkit-box-orient: vertical;">Cras
+                                            justo odio, dapibus ac facilisis in, egestas
+                                            eget quam.
+                                            Donec id elit non mi
+                                            porta
+                                            gravida at eget metus.justo odio, dapibus ac facilisis in, egestasjusto odio,
+                                            dapibus ac facilisis in, egestas</p> -->
+
+                                            <p class="rate-save"><i class="fa fa-star" aria-hidden="true" style="color:#eac71f">
+                                                    <span style="font-family: 'Open Sans', sans-serif;color:rgba(0,0,0,0.5);font-size:12px">4.0
+                                                        (8)</span></i>
+                                                <em class="save-button">
+                                                    <a name="save_post" class="fa fa-heart-o" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a>
+                                                    <a class="fa fa-heart" style="float:right;text-decoration: none; padding-top:3px;color:#EF4158;padding-right:3px;"></a></em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!--/item-->
+
+
+                    </div>
+                    <!--/carousel-inner-->
+                    <a class="left carousel-control" href="#myCarousel-team" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel-team" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!--/myCarousel-->
+            </div>
+            <!--/Recent Client Posts-->
+        </div>
+    </div>
+</section>
+
+<section id="howItWorks" style="background-color: #f8f9fa">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-uppercase" style="font-family: 'Raleway', sans-serif;font-size:28px;font-weight:bold;letter-spacing: 2px;">How
+                    it works</h2>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#findPartner" aria-controls="findPartner" role="tab"
+                            data-toggle="tab">Find A Partner</a></li>
+                    <li role="presentation"><a href="#createPost" aria-controls="createPost" role="tab" data-toggle="tab">Create
+                            A Post</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content">
+            <!--Find Partner Tab-->
+            <div role="tabpanel" class="tab-pane active" id="findPartner">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="timeline">
+                            <li>
+                                <div class="timeline-image" style="background-image: url('/static/img/home/timeline1.png'); background-size: cover">
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>STEP 1</h4>
+                                        <h4 class="subheading">Choose Category & Browse Posts</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">Search and browse for clients posts or teams posts. You
+                                            can view more or use the search bar at the top of the Bestfit homepage
+                                            to search all teams or all clients.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-image" style="background-image: url('/static/img/home/timeline2.png'); background-size: cover">
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>STEP 2</h4>
+                                        <h4 class="subheading">Find Your Match</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">Read clients’ or teams’ profiles, including the user
+                                            profile, description of the service/needs, and other public information.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-image" style="background-image: url('/static/img/home/timeline3.png'); background-size: cover">
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>STEP 3</h4>
+                                        <h4 class="subheading">Contact Directly</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">Login to contact the client or the team that meets your
+                                            needs. Without sign up/ log in, you can only view the posts, but cannot
+                                            have access to the contact information.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-image">
+                                    <h4>Make The
+                                        <br>Dream House
+                                        <br>Come True!</h4>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--Creat Posts Tab-->
+            <div role="tabpanel" class="tab-pane" id="createPost">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="timeline">
+                            <li>
+                                <div class="timeline-image" style="background-image: url('/static/img/home/timeline3.png'); background-size: cover">
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>STEP 1</h4>
+                                        <h4 class="subheading">Create Your Account</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">Sign up and log in to create a user profile. Click on the
+                                            SIGN UP/LOG IN button on the upper right corner of the Bestfit homepage to
+                                            sign up or login.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-image" style="background-image: url('/static/img/home/timeline2.png'); background-size: cover">
+
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>STEP 2</h4>
+                                        <h4 class="subheading">Fill Out The Post Form</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">Submit a form to provide basic information, including
+                                            housing image and description of the service/project.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-image" style="background-image: url('/static/img/home/timeline1.png'); background-size: cover">
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>STEP 3</h4>
+                                        <h4 class="subheading">Check Your Inbox</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">Submit the post and start to communicate with the teams
+                                            or clients that best fit your needs.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-image">
+                                    <h4>Make The
+                                        <br>Dream House
+                                        <br>Come True!</h4>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="testimonial" style="padding:0 0 50px 0;">
+    <div class="">
+        <div class="row">
+            <div class="col-md-12 text-center testi-col" style="padding-left:0;padding-right:0">
+                <div id="myTestimonial" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myTestimonial" data-slide-to="0" class="active"></li>
+                        <li data-target="#myTestimonial" data-slide-to="1"></li>
+                        <li data-target="#myTestimonial" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active t-img" style="background-color: #eac71f;height: 73vh;">
+                            <div class="carousel-caption">
+                                <h2>WHAT USERS SAY</h2>
+                                <div class="content-divider"></div>
+                                <img src="/static/img/home/profile-img1.png" width="16%">
+                                <p><i class="fa fa-quote-left" style="font-size: 18px;"></i>&nbsp &nbsp
+                                    Working with Jim and his team is amazing. From the first steps of the general
+                                    design layout of a room to picking paint and fabrics and furniture was easy and
+                                    exciting. The installation and follow up with small glitches offered outstanding
+                                    personal service. &nbsp &nbsp<i class="fa fa-quote-right" style="font-size: 18px;"></i></p>
+                                <h6>ANTONIO MORENO <span>, Building Designer</span></h6>
+                            </div>
+                        </div>
+
+                        <div class="item" style="background-color: #eac71f;height: 73vh;">
+                            <div class="carousel-caption">
+                                <h2>WHAT USERS SAY</h2>
+                                <div class="content-divider"></div>
+                                <img src="/static/img/home/profile-img2.png" width="16%">
+                                <p><i class="fa fa-quote-left" style="font-size: 18px;"></i>&nbsp &nbsp Sally, I am
+                                    completely overwhelmed with the new living room. It is beyond beautiful. I feel
+                                    your thought in each piece. To receive so many things that fit in their own place
+                                    perfectly. Thank you for this really cool experience! I have enjoyed watching this
+                                    unfold today. Wonderful. &nbsp &nbsp<i class="fa fa-quote-right" style="font-size: 18px;"></i></p>
+                                <h6>STEVE THOMAS <span>, Home Builder</span></h6>
+
+                            </div>
+
+                        </div>
+
+                        <div class="item" style="background-color: #eac71f;height: 73vh;">
+                            <div class="carousel-caption">
+                                <h2>WHAT USERS SAY</h2>
+                                <div class="content-divider"></div>
+                                <img src="/static/img/home/profile-img3.png" width="16%">
+                                <p><i class="fa fa-quote-left" style="font-size: 18px;"></i>&nbsp &nbsp Karen and his
+                                    team are amazing. They took a challenging, older house and transformed it into a
+                                    functional Architectural Design worthy home. Karen went above and beyond to make
+                                    sure we were happy, was more than willing to change original plans as needed, was
+                                    incredibly responsive, and gave us the home we always wanted. &nbsp &nbsp<i class="fa fa-quote-right"
+                                        style="font-size: 18px;"></i></p>
+                                <h6>JACKSON LOGAN <span>, Interior Designer</span></h6>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myTestimonial" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myTestimonial" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+{% endblock %}

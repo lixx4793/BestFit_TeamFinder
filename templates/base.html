@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+        crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="/static/css/font-awesome/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Lato:300,400,700,900|Leckerli+One|Open+Sans:300,400,600,700,800|Raleway:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/home.css" />
+    <link rel="stylesheet" href="/static/css/post_info.css" />
+
+    <!-- Meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>{% block title %}{% endblock %} | project 1</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/static/img/logo/logo-original.png">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <!-- Navbar -->
+    <header id="navbar">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid" style="height: 78px;">
+                <div class="site-nav-wrapper">
+                    <!-- Logo -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand smooth-scroll" href="#pageHeader">
+                            <img src="" width="135px" alt="logo">
+                        </a>
+                    </div>
+                    <!-- Main Menu -->
+                    <div class="container" id="nav-menu">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav" id="nav-item">
+                                <li><a class="" href="{{ url_for("home") }}">HOME</a></li>
+                                <li><a class="smooth-scroll" href="#howItWorks">HOW IT WORKS</a></li>
+                                <li><a href="{{ url_for("searchteam") }}">FIND TEAMS</a></li>
+                                <li><a href="{{ url_for("searchclient") }}">FIND CLIENTS</a></li>
+
+                                {% if session['profile'] is defined %}
+                                <li><a class="" href="{{ url_for("logout") }}">LOGOUT</a></li>
+                                <li><a class="" href="{{ url_for("profile") }}">PROFILE<a></li>
+                                {% else %}
+                                <li><a class="" href="{{ url_for("login") }}" id="sign-up">SIGN UP/LOG IN</a>
+                                <li>
+                                    {% endif %}
+                            </ul>
+                            <!-- <input type="hidden" id="nav-type" name="type" /> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends-->
+
+    {% block header %}{% endblock %}
+    <div id="content">{% block content %}{% endblock %}</div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" id="footer-logo">
+                    <img class="logo" src="/static/img/logo/logo-original-name.png" alt="logo" height="40">
+                </div>
+
+                <div class="col-md-3 col-sm-6 footer-nav" style="padding-bottom: 25px;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="">Find Teams</a></li>
+                        <li class="list-group-item"><a href="">Building Designers</a></li>
+                        <li class="list-group-item"><a href="">Home Builders</a></li>
+                        <li class="list-group-item"><a href="">Interior Decorators</a></li>
+                        <li class="list-group-item"><a href="">Home Remodelers</a></li>
+                        <li class="list-group-item"><a href="">Landscape Constractors</a></li>
+                        <!-- <li class="list-group-item"><a href="">Swimming Pool Builders</a></li> -->
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-nav" style="padding-bottom: 25px;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="">Find Clients</a></li>
+                        <li class="list-group-item"><a href="">Need Building Designers</a></li>
+                        <li class="list-group-item"><a href="">Need Home Builders</a></li>
+                        <li class="list-group-item"><a href="">Need Interior Decorators</a></li>
+                        <li class="list-group-item"><a href="">Need Home Remodelers</a></li>
+                        <li class="list-group-item"><a href="">Need Landscape Constractors</a></li>
+                        <!-- <li class="list-group-item"><a href="">Swimming Pool Builders</a></li> -->
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-nav" style="padding-bottom: 25px;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="">Bestfit</a></li>
+                        <li class="list-group-item"><a href="">About</a></li>
+                        <li class="list-group-item"><a href="">Press & News</a></li>
+                        <li class="list-group-item"><a href="">Terms of Service</a></li>
+                        <li class="list-group-item"><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-nav" style="padding-bottom: 25px;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="">Support</a></li>
+                        <li class="list-group-item"><a href="">FAQs</a></li>
+                        <li class="list-group-item"><a href="">Terms & Conditions</a></li>
+                        <li class="list-group-item"><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div id="footer-content" class="col-md-12 col-sm-12" style="border-top: solid 1px rgba(0,0,0,0.1);">
+                    <p id="copyright" style="margin-top:30px;">Copyright &copy; 2018 All Rights Reserved By Bestfit</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to top -->
+        <a href="#pageHeader" id="back-to-top" class="btn btn-sm btn-back-to-top smooth-scroll text-center" role="button">
+            <i class="fa fa-angle-up"></i>
+        </a>
+
+
+    </footer>
+
+    <!--JS & jQuery-->
+    <script type=text/javascript src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <!-- Pagination JS -->
+    <script type=text/javascript src="{{ url_for('static', filename='js/pagination.js') }}"></script>
+
+    <script type=text/javascript src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script type=text/javascript src="{{ url_for('static', filename='js/yuhao.js') }}"></script>
+    <script type=text/javascript src="{{ url_for('static', filename='js/post_info.js') }}"></script>
+
+</body>
+
+</html>
